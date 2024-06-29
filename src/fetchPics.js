@@ -8,7 +8,7 @@ export const BASE_URL = `https://pixabay.com/api/`;
 export async function fetchPics(searchQuery = '', page = 1) {
   let url = '';
   if (searchQuery) {
-    url = `${BASE_URL}/search/images?api_key=${API_KEY}&language=en-US&query=${encodeURIComponent(
+    url = `${BASE_URL}/?api_key=${API_KEY}&=${encodeURIComponent(
       searchQuery
     )}&page=${page}`;
   } else {
